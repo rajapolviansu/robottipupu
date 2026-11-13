@@ -21,7 +21,7 @@ window.NUUTTI_DATA = {
     "Suomen ainoa luonnonvarainen kissaeläin on ilves.",
     "Saimaannorppa elää vain Saimaalla, eikä sitä tavata luonnossa missään muualla maailmassa.",
     "Käärmeistä Suomessa elää luonnonvaraisena vain kolme lajia: kyy, rantakäärme ja kangaskäärme.",
-    "Jokamiehenoikeudella saat liikkua luonnossa ja poimia marjoja ja sieniä, kun et häiritse etkä roskaa.",
+    "Jokamiehenoikeudella saat liikkua luonnossa ja poimia marjoja ja sieniä, kunhan et häiritse etkä roskaa.",
   ],
   // Suuntaa antava Suomen kartta: [pituuspiiri, leveyspiiri]
   finland: {
@@ -49,10 +49,10 @@ window.NUUTTI_DATA = {
       friend: { name: "Hugo-huuhkaja", emoji: "🦉", about: "Hugo on Suomen suurin pöllö. Se näkee hämärässä erinomaisesti ja huhuilee kumealla äänellä talviyönä." },
       quiz: [
         {
-          t: "choice", q: "Kesäyönä suolta kuuluu pitkää, tasaista hurinaa, kuin pieni moottori käyisi. Kuka laulaa?",
+          t: "choice", q: "Kesäyönä suolta kuuluu pitkää, tasaista hurinaa, kuin pieni moottori kävisi. Kuka laulaa?",
           audio: "assets/kehraaja.mp3",
           a: ["Kehrääjä", "Kyyhky", "Kuikka"], correct: 0,
-          why: "Kehrääjä on hämärässä lentävä yölintu. Sen laulu on pitkä, kehräävä hurina, jota voi kuulla pitkälle.",
+          why: "Kehrääjä on hämärässä lentävä yölintu. Sen laulu on pitkä, kehräävä hurina, joka kuuluu pitkälle.",
         },
         {
           t: "choice", q: "Talvella pakkasyössä metsästä kaikuu matala, kumea \"puuh-hu\". Kuka huhuilee?",
@@ -61,7 +61,7 @@ window.NUUTTI_DATA = {
           why: "Huuhkaja on Suomen suurin pöllö. Sen kumea huhuilu kuuluu parhaiten tammi-maaliskuussa, kun se aloittaa pesinnän.",
         },
         {
-          t: "choice", q: "Lumessa on jälki: neljä varvasta ja pyöreä kämmen, mutta ei yhtään kynnenjälkeä. Kenen jälki?",
+          t: "choice", q: "Lumessa on jälki: neljä varvasta ja pyöreä kämmen, mutta ei yhtään kynnenjälkeä. Kenen jälki se on?",
           a: ["Ketun", "Ilveksen", "Karhun"], correct: 1,
           why: "Kissaeläinten kynnet ovat sisäänvedettävät, joten ne eivät jätä jälkeä. Ketun ja suden jäljissä kynnet näkyvät.",
         },
@@ -155,10 +155,10 @@ window.NUUTTI_DATA = {
           why: "Siilin syke laskee tavallisesta noin 190 lyönnistä minuutissa noin 20 lyöntiin, ja ruumiin lämpö laskee muutamaan asteeseen. Näin se säästää energiaa.",
         },
         {
-          t: "choice", q: "Lumikko ja kärppä vaihtavat talveksi valkoiseen turkkiin. Mikä on nykyään ongelma?",
+          t: "choice", q: "Lumikko ja kärppä vaihtavat talveksi valkoiseen turkkiin. Mikä on nykyään ongelma valkoisessa turkissa?",
           a: ["Valkoinen turkki on liian lämmin", "Lunta tulee myöhään ja sulaa aikaisin, joten valkoinen eläin näkyy hyvin mustaa maata vasten", "Ne eivät löydä ruokaa"], correct: 1,
           keep: true,
-          why: "Eläin vaihtaa turkkinsa päivän pituuden mukaan, ei lumen. Kun lumi tulee myöhemmin, valkoinen turkki paljastaa sen pedoille.",
+          why: "Eläin vaihtaa turkkinsa päivän pituuden mukaan, ei lumen. Kun lumi tulee myöhemmin, valkoinen turkki paljastaa eläimen pedoille.",
         },
         {
           t: "choice", q: "Mikä suomalainen lintu muuttaa pisimmälle, jopa Etelämantereen vesille asti?",
@@ -169,7 +169,7 @@ window.NUUTTI_DATA = {
           t: "choice", q: "Miten kärppä pärjää talvella?",
           a: ["Se nukkuu koko talven", "Turkki muuttuu valkoiseksi, vain hännän kärki jää mustaksi, ja se metsästää myyriä lumen alta", "Se lentää etelään"], correct: 1,
           keep: true,
-          why: "Kärpän hännänkärki on talvellakin musta. Kärppä on niin ohut, että se mahtuu seuraamaan myyriä niiden käytäville lumen alle.",
+          why: "Kärpän hännän kärki on talvellakin musta. Kärppä on niin ohut, että se mahtuu seuraamaan myyriä niiden käytäville lumen alle.",
         },
         {
           t: "choice", q: "Mikä on Suomen kansallislintu?",
