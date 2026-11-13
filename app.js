@@ -128,6 +128,7 @@
 
   function renderChoice(q, body, answer) {
     if (q.visual) body.append(el(`<div class="visual ${q.visual.sil ? "sil" : ""}" aria-label="${q.visual.sil ? "siluetti" : "kuva"}">${q.visual.emoji}</div>`));
+    if (q.audio) body.append(el(`<audio class="sample" controls preload="none" src="${q.audio}" aria-label="Ääninäyte">Selaimesi ei tue ääntä.</audio>`));
     const opts = el(`<div class="opts"></div>`);
     const list = q.a.map((txt, idx) => ({ txt, ok: idx === q.correct }));
     (q.keep ? list : shuffle(list)).forEach((o) => {

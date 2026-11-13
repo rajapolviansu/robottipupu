@@ -3,6 +3,7 @@
 // Kysymystyypit (t):
 //   choice   – monivalinta: { q, a: [vaihtoehdot], correct: indeksi, why, visual?: { emoji, sil? }, keep? }
 //              visual.sil = true näyttää kuvan siluettina; keep = true säilyttää vaihtoehtojen järjestyksen
+//              audio = "assets/tiedosto.mp3" lisää kysymykseen ääninäytteen (soitin)
 //   compare  – "Kumpi on enemmän?": { q, items: [{ n, v, label }, { n, v, label }], why }  (suurempi v on oikein)
 //   order    – järjestä pienimmästä suurimpaan: { q, items: [{ n, v, label }, ...], why }
 //   map      – klikkaa Suomen karttaa: { q, correct: alueen id, why }
@@ -49,11 +50,13 @@ window.NUUTTI_DATA = {
       quiz: [
         {
           t: "choice", q: "Kesäyönä suolta kuuluu pitkää, tasaista hurinaa, kuin pieni moottori käyisi. Kuka laulaa?",
+          audio: "assets/kehraaja.mp3",
           a: ["Kehrääjä", "Kyyhky", "Kuikka"], correct: 0,
           why: "Kehrääjä on hämärässä lentävä yölintu. Sen laulu on pitkä, kehräävä hurina, jota voi kuulla pitkälle.",
         },
         {
           t: "choice", q: "Talvella pakkasyössä metsästä kaikuu matala, kumea \"puuh-hu\". Kuka huhuilee?",
+          audio: "assets/huuhkaja.mp3",
           a: ["Kurki", "Huuhkaja", "Kuovi"], correct: 1,
           why: "Huuhkaja on Suomen suurin pöllö. Sen kumea huhuilu kuuluu parhaiten tammi-maaliskuussa, kun se aloittaa pesinnän.",
         },
