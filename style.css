@@ -78,7 +78,7 @@ main { padding-bottom: 20px; }
 /* Modal */
 .modal { position: fixed; inset: 0; background: rgba(40, 30, 60, .55); display: flex; align-items: center; justify-content: center; padding: 14px; z-index: 10; }
 .modal.hidden { display: none; }
-.card { background: #fff; border: 3px solid var(--line); border-radius: 18px; padding: 18px; max-width: 560px; width: 100%; max-height: 92vh; overflow: auto; }
+.card { background: #fff; border: 3px solid var(--line); border-radius: 18px; padding: 18px; max-width: 560px; width: 100%; max-height: 92vh; max-height: 92dvh; overflow: auto; }
 .card h2 { margin: 0 0 4px; }
 .card ul { padding-left: 20px; }
 .card li { margin-bottom: 6px; }
@@ -100,7 +100,7 @@ footer { text-align: center; opacity: .6; font-size: .85rem; padding: 6px 16px 2
 .opts button .badge { display: inline-block; min-width: 1.4em; margin-right: 6px; font-weight: bold; }
 .opts button.picked { background: var(--soft); }
 .btn.small { padding: 5px 12px; box-shadow: 0 2px 0 var(--line); font-size: .9rem; }
-.fimap { display: block; width: 100%; max-width: 280px; margin: 8px auto; }
+.fimap { display: block; width: auto; max-width: 100%; height: 44vh; height: 44dvh; max-height: 420px; margin: 4px auto; }
 .fimap .reg > * { fill: #dff3ea; stroke: var(--line); stroke-width: .3; cursor: pointer; }
 .fimap .reg:hover > *, .fimap .reg:focus > * { fill: var(--soft); outline: none; }
 .fimap .reg.right > * { fill: #c9f2c0; }
