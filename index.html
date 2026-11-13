@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuutti tutkii maapalloa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div id="mascot" class="mascot" aria-hidden="true"></div>
+      <div>
+        <h1>Nuutti tutkii maapalloa</h1>
+        <div id="levelTitle" class="level"></div>
+      </div>
+    </div>
+    <div class="stats">
+      <span class="pill" title="Porkkanat">🥕 <b id="carrotCount">0</b></span>
+      <span class="pill" title="Ystävät">💛 <b id="friendCount">0</b>/7</span>
+    </div>
+  </header>
+
+  <div id="bubble" class="bubble"></div>
+
+  <nav class="tabs" role="tablist">
+    <button data-tab="map" class="active">🌍 Kartta</button>
+    <button data-tab="carrots">🥕 Porkkanapeli</button>
+    <button data-tab="friends">💛 Ystävät</button>
+    <button data-tab="book">📖 Tietokirja</button>
+  </nav>
+
+  <main>
+    <section id="tab-map" class="tab active"></section>
+    <section id="tab-carrots" class="tab"></section>
+    <section id="tab-friends" class="tab"></section>
+    <section id="tab-book" class="tab"></section>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="card" id="modalCard"></div>
+  </div>
+
+  <footer>Nuutin tehtävä: kerää porkkanoita, hanki ystäviä ja tutki maapalloa.</footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
