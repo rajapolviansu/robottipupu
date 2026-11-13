@@ -65,7 +65,7 @@
     t.innerHTML = `<h2>Tutki maapalloa</h2><p class="hint">Valitse maanosa, lue faktat ja vastaa Nuutin tietovisaan. Oikeista vastauksista saat 🥕 ja lopuksi uuden ystävän!</p>
       <div class="map" id="map"></div><p class="map-note">Tähdellä merkityt maanosat olet jo tutkinut: ${friendsCount()}/${D.regions.length}.</p>`;
     const map = $("#map");
-    for (let i = 0; i < 18; i++) map.append(el(`<div class="dots"><i style="left:${(i * 37) % 97}%;top:${(i * 53) % 93}%"></i></div>`).firstChild);
+    for (let i = 0; i < 18; i++) map.append(el(`<div class="dots"><i style="left:${(i * 37) % 97}%;top:${(i * 53) % 93}%"></i></div>`));
     map.append(el(`<div class="map-nuutti">${nuuttiSVG()}</div>`));
     D.regions.forEach((r) => {
       const b = el(`<button class="pin ${S.done[r.id] ? "done" : ""}" style="left:${r.pos.x}%;top:${r.pos.y}%;border-color:${r.color}"><span class="em">${r.emoji}</span>${r.name}</button>`);
