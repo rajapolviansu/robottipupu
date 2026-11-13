@@ -94,6 +94,7 @@ footer { text-align: center; opacity: .6; font-size: .85rem; padding: 6px 16px 2
 /* Kysymystyypit */
 .visual { font-size: 5rem; text-align: center; margin: 4px 0; }
 .visual.sil { filter: brightness(0); }
+.sample { display: block; width: 100%; max-width: 420px; margin: 8px auto 12px; }
 .opts.compare { grid-template-columns: 1fr 1fr; }
 .opts.compare button { display: flex; flex-direction: column; gap: 4px; text-align: center; font-size: 1.1rem; }
 .num { display: block; font-size: .85rem; opacity: .8; min-height: 1em; }
