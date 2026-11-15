@@ -5,7 +5,7 @@
   const el = (html) => { const t = document.createElement("template"); t.innerHTML = html.trim(); return t.content.firstChild; };
 
   // ---------- Tallennus ----------
-  let S = { carrots: 0, done: {}, rightQ: {}, seenQ: {} };
+  let S = { carrots: 0, done: {}, rightQ: {}, seenQ: {}, trophy: false };
   try { Object.assign(S, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) {}
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
 
@@ -43,7 +43,9 @@
     const before = level().title; S.carrots += n; save(); renderHeader();
     if (level().title !== before) say(`Hurraa! Nyt olen ${level().title}! 🎉`, "wow");
   };
+  const allRight = () => D.topics.every((tp) => rightCount(tp) === tp.quiz.length);
   function renderHeader() {
+    $("#trophy").classList.toggle("hidden", !S.trophy);
     $("#carrotCount").textContent = S.carrots;
     $("#friendCount").textContent = friendsCount();
     $("#friendTotal").textContent = D.topics.length;
@@ -241,8 +243,23 @@
       <p><b>${tp.friend.name}</b><br>${tp.friend.about}</p>
       <p class="hint">Vastasit oikein ${right}/${tp.quiz.length}.${friendsCount() === D.topics.length ? " 🎉 Olet suorittanut kaikki aiheet!" : ""}</p>
       <button class="btn">Jatketaan!</button></div>`);
-    n.querySelector("button").onclick = closeModal;
+    n.querySelector("button").onclick = () => {
+      if (!S.trophy && allRight()) showTrophy(); else closeModal();
+    };
     say(isNew ? `${tp.friend.name} liittyi seuraani!` : "Hienoa kertausta!", "wow");
+    openModal(n);
+  }
+
+  // Pokaali, kun kaikkiin kysymyksiin on vastattu oikein
+  function showTrophy() {
+    S.trophy = true; save(); renderHeader();
+    const n = el(`<div class="reward"><div class="em trophy-em">🏆🥕</div>
+      <h2>Porkkanapokaali!</h2>
+      <p><b>Vastasit oikein kaikkiin kysymyksiin.</b></p>
+      <div class="thanks"><div class="thanks-nuutti" aria-hidden="true">${nuuttiSVG("happy")}</div><p class="big">Kiitos, kun autoit minua!</p></div>
+      <button class="btn">Ole hyvä, Nuutti!</button></div>`);
+    n.querySelector("button").onclick = closeModal;
+    say("Kiitos, kun autoit minua!", "wow");
     openModal(n);
   }
 

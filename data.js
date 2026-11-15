@@ -329,7 +329,7 @@ window.NUUTTI_DATA = {
         },
         {
           t: "choice", q: "Mitä sananlasku \"Parempi pyy pivossa kuin kymmenen oksalla\" tarkoittaa?",
-          a: ["Pieni varma on parempi kuin iso epävarma"], correct: 0,
+          a: ["Pieni varma on parempi kuin iso epävarma", "Pyyt pitää metsästää oksilta", "Pivossa ei saa pitää lintuja"], correct: 0,
           why: "Parempi tyytyä siihen, mikä on varmaa.",
         },
         {
