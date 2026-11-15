@@ -276,18 +276,18 @@ window.NUUTTI_DATA = {
     // ------------------------------------------------------------------
     {
       id: "ihminen", name: "Ihminen ja luonto", emoji: "🧺", color: "#c99be8",
-      intro: "Mitä luonnossa saa tehdä? Jokamiehenoikeudet ja luonnonsuojelun perusteet.",
-      friend: { name: "Olli-orava", emoji: "🐿️", about: "Olli tietää metsän säännöt: pidä hiljaa, älä roskaa ja jätä pesät rauhaan." },
+      intro: "Mitä luonnossa saa tehdä? Jokaisenoikeudet ja luonnonsuojelun perusteet.",
+      friend: { name: "Olli-orava", emoji: "🐿️", about: "Olli tietää metsän säännöt: älä aiheuta turhaa meteliä, älä roskaa ja jätä pesät rauhaan." },
       quiz: [
         {
           t: "choice", q: "Saatko poimia lakkoja ja mustikoita toisen omistamasta metsästä?",
-          a: ["Kyllä, jokamiehenoikeudella", "Ei, ilman lupaa ei saa", "Vain omalla pihalla"], correct: 0,
+          a: ["Kyllä, jokaisenoikeudella", "Ei, ilman lupaa ei saa", "Vain omalla pihalla"], correct: 0,
           why: "Luonnonmarjat ja useimmat sienet saa poimia vapaasti, myös toisen maalta. Ei kuitenkaan pihapiirissä eikä suojelualueilla, joissa on omat säännöt.",
         },
         {
           t: "choice", q: "Saatko pystyttää teltan yöksi toisen omistamalle maalle?",
           a: ["Kyllä, lyhyeksi aikaa, kunhan et häiritse asukkaita", "Ei missään tapauksessa", "Vain jos maanomistaja on paikalla"], correct: 0,
-          why: "Lyhytaikainen telttailu on jokamiehenoikeus, kunhan et mene liian lähelle asutusta. Kansallispuistoissa telttailu on sallittu vain merkityillä paikoilla.",
+          why: "Lyhytaikainen telttailu on jokaisenoikeus, kunhan et mene liian lähelle asutusta. Kansallispuistoissa telttailu on sallittu vain merkityillä paikoilla.",
         },
         {
           t: "choice", q: "Saatko tehdä nuotion toisen omistamalle maalle?",
@@ -302,7 +302,7 @@ window.NUUTTI_DATA = {
         {
           t: "choice", q: "Mitä kalastustapaa saa harrastaa ilman lupaa?",
           a: ["Verkkokalastus", "Onkiminen ja pilkkiminen", "Heittokalastus"], correct: 1,
-          why: "Onkiminen ja pilkkiminen ovat jokamiehenoikeuksia. Muuhun kalastukseen tarvitaan yleensä kalastuksenhoitomaksu tai lupa vesialueen omistajalta.",
+          why: "Onkiminen ja pilkkiminen ovat jokaisenoikeuksia. Muuhun kalastukseen tarvitaan yleensä kalastuksenhoitomaksu tai lupa vesialueen omistajalta.",
         },
         {
           t: "choice", q: "Löydät linnunpesän, jossa on munia. Mitä teet?",
@@ -328,19 +328,19 @@ window.NUUTTI_DATA = {
           why: "Sananlasku opettaa, että käytös palaa takaisin. Sama ajatus kuuluu: kuten metsään huudetaan, niin sieltä vastataan.",
         },
         {
-          t: "choice", q: "Mitä sananlasku \"Parempi pyy pivossa kuin metso männyssä\" tarkoittaa?",
-          a: ["Pieni varma on parempi kuin iso epävarma", "Pyy on parempi lintu kuin metso", "Linnut on parasta pyytää männystä"], correct: 0,
-          why: "Pyy pivossa eli ansassa on jo omassa kädessä, kun metso männyssä voi lentää pois. Parempi tyytyä siihen, mikä on varmaa.",
+          t: "choice", q: "Mitä sananlasku \"Parempi pyy pivossa kuin kymmenen oksalla\" tarkoittaa?",
+          a: ["Pieni varma on parempi kuin iso epävarma"], correct: 0,
+          why: "Parempi tyytyä siihen, mikä on varmaa.",
         },
         {
           t: "choice", q: "Mistä Väinämöisen ensimmäinen kantele tehtiin Kalevalassa?",
-          a: ["Hauin leukaluusta", "Karhun hampaasta", "Hirven sarvesta"], correct: 0,
+          a: ["Hauen leukaluusta", "Karhun hampaasta", "Hirven sarvesta"], correct: 0,
           why: "Väinämöinen teki kanteleen suuren hauen leuasta. Kalevalassa tapahtuu paljon eläinten parissa.",
         },
         {
           t: "choice", q: "Kalevalan mukaan maailma syntyi munasta, jonka lintu muni Ilmattaren polvelle. Mikä lintu?",
           a: ["Sotka", "Kurki", "Joutsen"], correct: 0,
-          why: "Sotka muni munat Ilmattaren polvelle. Munan palaset muuttuivat taivaaksi, maaksi, kuuksi ja tähdiksi.",
+          why: "Sotka muni munan Ilmattaren polvelle. Munan palaset muuttuivat taivaaksi, maaksi, kuuksi ja tähdiksi.",
         },
         {
           t: "choice", q: "Kuka oli suomalaisessa perinteessä metsän haltija?",
