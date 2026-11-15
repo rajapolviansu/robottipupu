@@ -59,6 +59,31 @@ D.topics.forEach((t) => t.quiz.forEach((q, i) => {
     } catch (e) { failed++; console.error(`FAIL ${width}x${height}: ${e.message}`); }
     await page.close();
   }
+  // Pokaali: kaikki muut oikein tallennettuna, viimeinen aihe pelataan läpi
+  try {
+    const page = await browser.newPage({ viewport: { width: 412, height: 915 } });
+    const save = { carrots: 0, done: {}, seenQ: {}, rightQ: {} };
+    D.topics.forEach((t) => t.quiz.forEach((_, i) => { save.rightQ[t.id + ":" + i] = true; save.seenQ[t.id + ":" + i] = true; }));
+    await page.addInitScript((v) => { if (!localStorage.getItem("nuutti-save-v2")) localStorage.setItem("nuutti-save-v2", JSON.stringify(v)); }, save);
+    await page.goto(url);
+    assert(await page.locator("#trophy").isHidden(), "pokaali piilossa ennen suoritusta");
+    await page.locator(".topic").first().click();
+    await page.click("#go");
+    for (const q of D.topics[0].quiz) { // vastaukset voivat olla väärin, tallennus on jo täynnä
+      if (q.t === "choice") await page.locator(".opts button").first().click();
+      else if (q.t === "compare") await page.locator(".opts button").first().click();
+      else if (q.t === "order") for (const it of [...q.items].sort((a, b) => a.v - b.v)) await page.locator(".opts button:not([disabled])", { hasText: it.n }).first().click();
+      else if (q.t === "map") await page.locator(".reg").first().dispatchEvent("click");
+      await page.click("#next button");
+    }
+    await page.click(".reward button");
+    assert((await page.locator(".reward").innerText()).includes("Kiitos, kun autoit minua!"), "pokaalin teksti");
+    assert((await page.locator("#bubble").innerText()).includes("Kiitos, kun autoit minua!"), "Nuutti kiittää");
+    await page.click(".reward button");
+    assert(await page.locator("#trophy").isVisible(), "pokaali otsikossa");
+    console.log("ok   pokaali");
+    await page.close();
+  } catch (e) { failed++; console.error("FAIL pokaali: " + e.message); }
   await browser.close();
   process.exit(failed ? 1 : 0);
 })();
