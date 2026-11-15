@@ -114,3 +114,7 @@ footer { text-align: center; opacity: .6; font-size: .85rem; padding: 6px 16px 2
 .trophy-em { animation: trophy-pop .8s ease-out; }
 @keyframes trophy-pop { 0% { transform: scale(.3) rotate(-15deg); } 70% { transform: scale(1.2) rotate(5deg); } 100% { transform: scale(1) rotate(0); } }
 @media (prefers-reduced-motion: reduce) { .trophy-em { animation: none; } }
+.thanks { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 8px 0 14px; }
+.thanks .big { margin: 0; text-align: left; }
+.thanks-nuutti { width: 84px; flex: none; }
+.thanks-nuutti svg { width: 100%; height: auto; display: block; }

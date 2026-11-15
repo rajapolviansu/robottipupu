@@ -256,7 +256,7 @@
     const n = el(`<div class="reward"><div class="em trophy-em">🏆🥕</div>
       <h2>Porkkanapokaali!</h2>
       <p><b>Vastasit oikein kaikkiin kysymyksiin.</b></p>
-      <p class="big">Kiitos, kun autoit minua!</p>
+      <div class="thanks"><div class="thanks-nuutti" aria-hidden="true">${nuuttiSVG("happy")}</div><p class="big">Kiitos, kun autoit minua!</p></div>
       <button class="btn">Ole hyvä, Nuutti!</button></div>`);
     n.querySelector("button").onclick = closeModal;
     say("Kiitos, kun autoit minua!", "wow");
