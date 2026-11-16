@@ -7,8 +7,6 @@ Pelillinen tietosovellus robottipupu Nuutista. Nuutin tehtävä: kerätä porkka
 |---|---|
 | <img src="docs/screenshots/aiheet-mobiili.jpg" width="300" alt="Aiheet-näkymä"> | <img src="docs/screenshots/ystavat-mobiili.jpg" width="300" alt="Ystävät-näkymä"> |
 
-<img src="docs/screenshots/aiheet.png" width="300" alt="Aiheet"> <img src="docs/screenshots/kartta.png" width="300" alt="Karttakysymys">
-
 ## Pelaaminen
 Avaa `index.html` selaimessa (ei asennusta). Edistyminen tallentuu selaimen localStorageen.
 
@@ -31,4 +29,3 @@ Kaikki aiheet, kysymykset ja ystävät ovat tiedostossa `data.js`. Kysymystyypit
 - **Media**: kuva (`assets/nuutti.jpg`) ja ääninäytteet (`assets/*.mp3`).
 - **Testit**: Node.js + Playwright (Chromium), `tests/game.test.js`.
 - **Julkaisu**: Netlify (staattinen sivusto, esim. robottipupu.netlify.app).
-- **Kehitys**: Git/GitHub, ja työtä on tehty Claude Codella.
